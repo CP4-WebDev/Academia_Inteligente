@@ -1,121 +1,71 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import{useEffect, useState} from 'react'
+import Resultado from './Components/Resultado' 
+
+
+
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    const [peso, setPeso]=useState(0);
+    const [altura, setAltura]=useState(0);
+    const [resultado, setResultado]=useState(0);
+    const [mostrarresultado, setMostrarresultado]=useState(false);
 
-      <div className="ticks"></div>
+    const calcularIMC = () => {
+        if(peso > 0 && altura > 0){
+            const imc = peso / (altura * altura);
+            setResultado(imc.toFixed(2));
+        }else{
+            alert("Por favor, insira valores válidos para peso e altura.");          
+        }
+    }
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+//Efeito colateral para mostrar o resultado quando o resultado for atualizado
+useEffect(() =>{
+    resultado > 0 ? setMostrarresultado(true):setMostrarresultado(false)
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+},[resultado])
+
+       return (
+    <section className="container">
+      <div className="box">
+        <Header/>
+        <form>
+          <div>
+            <label htmlFor="altura">Altura<span>(ex: 1.80)</span></label>
+            <input
+              id="altura"
+              type="number"
+              step="0.01" //permite o uso de ponto/virgula (casa decimal)
+              placeholder="Digite sua altura"
+              onChange={({target})=>setAltura(parseFloat(target.value))}
+            />
+          </div>
+          
+            <div>
+            <label htmlFor="peso">Peso<span>(ex: 65)</span></label>
+            <input
+              id="peso"
+              type="number"
+              step="0.01" //permite o uso de ponto/virgula (casa decimal)
+              placeholder="Digite sua altura"
+              onChange={({target})=>setPeso(parseFloat(target.value))}
+            />
+          </div>
+          <button type="button" onClick={calcularImc}>Calcular</button>
+        </form>
+      </div>
+      {mostrarresultado &&(
+        //Envia o valor do resultado com 2 casas decimais via props para o componente resultado
+        <Resultado resultado={resultado.toFixed(2)}/>
+      )}
+  
+
+    </section>
   )
 }
 
 export default App
+        
