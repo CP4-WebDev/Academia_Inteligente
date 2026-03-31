@@ -1,3 +1,4 @@
+import "../Css/resultado.css";
 
 export const Tabela = ({ resultado }) => {
   const valor = parseFloat(resultado);

@@ -1,10 +1,8 @@
-import{useState} from 'react'
-import Resultado from './components/Resultado' 
-import Header from "./components/Header";
-import './Css/global.css';
-import './Css/estilo.css';
-
-function App() {
+import { useState } from "react";
+import Resultado from "./Resultado";
+import Header from "./Header";
+import "../Css/global.css";
+import "../Css/estilo.css";
 
   const [peso, setPeso] = useState(0);
   const [altura, setAltura] = useState(0);
@@ -68,5 +66,3 @@ function App() {
     </section>
   );
 }
-
-export default App;
