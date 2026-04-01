@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Resultado from "./Resultado";
+import { Tabela } from "./Resultado";
 import Header from "./Header";
-import "../Css/global.css";
-import "../Css/estilo.css";
+import "../css/global.css";
+import "../css/estilo.css";
 
 function Imc() {
 
@@ -64,7 +64,7 @@ function Imc() {
       </div>
 
       {mostrarResultado && (
-        <Resultado resultado={resultado.toFixed(2)} />
+        <Tabela resultado={Tabela.toFixed(2)} />
       )}
     </section>
   );

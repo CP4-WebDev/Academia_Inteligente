@@ -3,7 +3,7 @@
     --fontColor:#51e217;
     --fontColor1:#ffffff;
     --bgColor1:#424244;
-    --bgColor2:#050505;
+    --bgColor2:#d81c1c;
 }
 body{
     background: var(--bgColor2)

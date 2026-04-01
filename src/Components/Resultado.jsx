@@ -1,4 +1,4 @@
-import "../Css/resultado.css";
+import "../css/resultado.css";
 
 export const Tabela = ({ resultado }) => {
   const valor = parseFloat(resultado);
@@ -9,7 +9,7 @@ export const Tabela = ({ resultado }) => {
         <td>Abaixo do peso</td>
         <td>Abaixo de 18.5</td>
       </>
-    );
+    )
   } else if (valor < 25) {
     return (
       <>

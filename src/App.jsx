@@ -6,6 +6,7 @@ import Footer from "./components/Footer"
 import Sobre from "./routes/Sobre"
 import Contato from "./routes/Contato"
 import Planos from "./routes/Plano"
+import Imc from "./components/Imc"  
 
 
 
@@ -15,8 +16,9 @@ function App() {
 <BrowserRouter>
   <Header />
   <Routes>
-    <Route path="*" element={<Error/>} />
+    
     <Route path="/" element={<Home/>} />
+    <Route path="*" element={<Error/>} />
     <Route path="/imc" element={<Imc/>} />
     <Route path="/sobre" element={<Sobre/>} />
     <Route path="/planos" element={<Planos/>} />
