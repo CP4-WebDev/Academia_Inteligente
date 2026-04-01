@@ -1,72 +1,31 @@
-import{useState} from 'react'
-import Resultado from './components/Resultado' 
-import Header from "./components/Header";
-import './Css/global.css';
-import './Css/estilo.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Error from "./routes/Error"
+import Home from "./routes/Home"
+import Header from "./components/Header"
+import Footer from "./components/Footer"
+import Sobre from "./routes/Sobre"
+import Contato from "./routes/Contato"
+import Planos from "./routes/Plano"
+
+
 
 function App() {
-
-  const [peso, setPeso] = useState(0);
-  const [altura, setAltura] = useState(0);
-  const [resultado, setResultado] = useState(0);
-
-  const calcularIMC = () => {
-    if (peso > 0 && altura > 0) {
-      const imc = peso / (altura * altura);
-      setResultado(imc);
-    } else {
-      alert("Por favor, insira valores válidos para peso e altura.");
-    }
-  };
-
-  const mostrarResultado = resultado > 0;
-
   return (
-    <section className="container">
-      <div className="box">
-        <Header />
-
-        <form>
-          <div>
-            <label htmlFor="altura">
-              Altura <span>(ex: 1.80)</span>
-            </label>
-            <input
-              id="altura"
-              type="number"
-              step="0.01"
-              placeholder="Digite sua altura"
-              onChange={({ target }) =>
-                setAltura(parseFloat(target.value) || 0)
-              }
-            />
-          </div>
-
-          <div>
-            <label htmlFor="peso">
-              Peso <span>(ex: 65)</span>
-            </label>
-            <input
-              id="peso"
-              type="number"
-              step="0.01"
-              placeholder="Digite seu peso"
-              onChange={({ target }) =>
-                setPeso(parseFloat(target.value) || 0)
-              }
-            />
-          </div>
-          <button type="button" onClick={calcularIMC}>
-            Calcular
-          </button>
-        </form>
-      </div>
-
-      {mostrarResultado && (
-        <Resultado resultado={resultado.toFixed(2)} />
-      )}
-    </section>
-  );
+    
+<BrowserRouter>
+  <Header />
+  <Routes>
+    <Route path="*" element={<Error/>} />
+    <Route path="/" element={<Home/>} />
+    <Route path="/imc" element={<Imc/>} />
+    <Route path="/sobre" element={<Sobre/>} />
+    <Route path="/planos" element={<Planos/>} />
+    <Route path="/contato" element={<Contato/>} />
+    
+  </Routes>
+  <Footer />
+</BrowserRouter>   
+  )
 }
 
-export default App;
+export default App

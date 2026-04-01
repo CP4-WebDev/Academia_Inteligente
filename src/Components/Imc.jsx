@@ -4,7 +4,7 @@ import Header from "./Header";
 import "../Css/global.css";
 import "../Css/estilo.css";
 
-function App() {
+function Imc() {
 
   const [peso, setPeso] = useState(0);
   const [altura, setAltura] = useState(0);
@@ -70,4 +70,4 @@ function App() {
   );
 }
 
-export default App;
+export default Imc;
