@@ -4,6 +4,8 @@ import Header from "./Header";
 import "../Css/global.css";
 import "../Css/estilo.css";
 
+function App() {
+
   const [peso, setPeso] = useState(0);
   const [altura, setAltura] = useState(0);
   const [resultado, setResultado] = useState(0);
@@ -54,6 +56,7 @@ import "../Css/estilo.css";
               }
             />
           </div>
+
           <button type="button" onClick={calcularIMC}>
             Calcular
           </button>
@@ -66,3 +69,5 @@ import "../Css/estilo.css";
     </section>
   );
 }
+
+export default App;
