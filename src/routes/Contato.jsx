@@ -1,5 +1,8 @@
 import { useState } from "react";
+<<<<<<< HEAD
 import "../css/estilo.css";
+=======
+>>>>>>> 5f66a5640e781cc920e4f0e640d92ea22c573a48
 
 const Contato = () => {
   const [form, setForm] = useState({
@@ -22,6 +25,7 @@ const Contato = () => {
   };
 
   return (
+<<<<<<< HEAD
     <div className="contato">
 
       <h1>Contato</h1>
@@ -29,6 +33,13 @@ const Contato = () => {
 
       <form onSubmit={handleSubmit} className="form-contato">
 
+=======
+    <div style={{ padding: "40px" }}>
+      <h2>Contato</h2>
+      <p>Entre em contato conosco!</p>
+
+      <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "10px", maxWidth: "400px" }}>
+>>>>>>> 5f66a5640e781cc920e4f0e640d92ea22c573a48
         <input
           type="text"
           name="nome"
@@ -53,7 +64,10 @@ const Contato = () => {
         />
 
         <button type="submit">Enviar</button>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5f66a5640e781cc920e4f0e640d92ea22c573a48
       </form>
     </div>
   );

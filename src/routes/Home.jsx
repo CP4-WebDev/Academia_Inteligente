@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import '../css/estilo.css'
 import '../css/global.css'
 import Imagem from '../assets/imgs/academia.png'
@@ -27,6 +28,13 @@ const Home = () => {
           <p>Equipamentos modernos e tecnologia avançada</p>
         </div>
       </section>
+=======
+const Home = () => {
+  return (
+    <div>
+      <h2>Bem-vindo à Nossa Academia</h2>
+      <p>Descubra o melhor em treinamento e saúde!</p>
+>>>>>>> 5f66a5640e781cc920e4f0e640d92ea22c573a48
     </div>
   )
 }

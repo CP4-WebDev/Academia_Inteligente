@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Treino from '../assets/imgs/treino.png'
 import Atleta from  '../assets/imgs/Atleta.png'
 import Luta from '../assets/imgs/Luta.png'
@@ -48,3 +49,15 @@ const Plano = () => {
 };
 
 export default Plano;
+=======
+const Plano = () => {
+  return (
+    <div>
+      <h2>Planos</h2>
+      <p>Confira nossos planos e preços!</p>
+    </div>
+  )
+}
+
+export default Plano
+>>>>>>> 5f66a5640e781cc920e4f0e640d92ea22c573a48
