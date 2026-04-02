@@ -71,6 +71,7 @@ button:hover {
 .cards {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 20px;
   padding: 50px;
   flex-wrap: wrap;
@@ -78,9 +79,9 @@ button:hover {
 .card {
   background: #111;
   border: 1px solid #00ff88;
-  padding: 20px;
-  border-radius: 12px;
-  width: 250px;
+  padding: 25px;
+  border-radius: 15px;
+  width: 280px;
   text-align: center;
   transition: 0.3s;
 }
@@ -116,4 +117,19 @@ footer {
   border-top: 1px solid #00ff88;
   color: #777;
   background: #000;
+}
+.imagemsection {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.img {
+  width: 90%;
+  max-width: 800px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.3);
+  transition: 0.3s;
+}
+img:houver{
+    transform: scale(1.02);
 }
