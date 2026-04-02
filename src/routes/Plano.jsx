@@ -1,9 +1,23 @@
+import Treino from '../assets/imgs/treino.png'
+import Atleta from  '../assets/imgs/Atleta.png'
+import Luta from '../assets/imgs/Luta.png'
 const Plano = () => {
   return (
     <div className="planos">
       <section className="hero">
         <h2>Planos</h2>
         <p>Confira nossos planos e preços!</p>
+      </section>
+      <section className='galeria'>
+        <div className='bloco'>
+        <img src={Atleta} alt="atleta" className='img-galeria' />
+        </div>
+        <div className='bloco'>
+        <img src={Treino} alt="Treino" className='img-galeria' />
+        </div>
+        <div className='bloco'>
+        <img src={Luta} alt="Luta" className='img-galeria' />
+        </div>
       </section>
       <section className="cardsplanos">
         <div className="cardplano">

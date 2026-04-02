@@ -71,7 +71,7 @@ button:hover {
 .cards {
   display: flex;
   justify-content: center;
-  align-items: flex;
+  align-items: center;
   gap: 20px;
   padding: 50px;
   flex-wrap: wrap;
@@ -130,7 +130,7 @@ footer {
   box-shadow: 0 0 25px rgba(0, 255, 136, 0.3);
   transition: 0.3s;
 }
-img:houver{
+img:houver {
     transform: scale(1.02);
 }
 .planos {
@@ -144,13 +144,13 @@ img:houver{
 }
 .destaque {
     border: 2px solid #00ff88;
-    transform: scale(1.08);
+    margin-top: -15px;
     box-shadow: 0 0 25px rgba(0,255,136,0.5);
 }
 .cardsplanos {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     gap: 30px;
     padding: 60px 20px;
     flex-wrap: wrap;
@@ -169,10 +169,10 @@ img:houver{
   width: 100%;
 }
 .badge {
-    postition: absolute;
+    postion: absolute;
     top: -10px;
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
 
     background-color: #00ff88;
     color: #000;
@@ -242,4 +242,28 @@ img:houver{
 .form-contato button:hover {
   background: #00cc6a;
   transform: scale(1.03);
+}
+.galeria{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 50px 20px;
+    flex-wrap: wrap;
+}
+.img-galeria{
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 1px solid #00ff88;
+    transition: 0.3s;
+}
+.img-galeria:hover{
+    transform: scale(1.03);
+    box-shadow: 0 0 25px rgba (0, 255, 136, 0.5);
+}
+* {
+  transition: all 0.3s ease;
 }
