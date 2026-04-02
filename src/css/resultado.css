@@ -1,0 +1,49 @@
+.resultado-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.resultado-card {
+  background: #111;
+  padding: 40px;
+  border-radius: 15px;
+  border: 1px solid #00ff88;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+}
+
+.resultado-card h2 {
+  color: #00ff88;
+  margin-bottom: 15px;
+}
+
+.resultado-valor {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.resultado-status {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+/* CORES POR STATUS */
+.baixo {
+  color: #00bfff;
+}
+
+.normal {
+  color: #00ff88;
+}
+
+.sobrepeso {
+  color: #ffcc00;
+}
+
+.obesidade {
+  color: #ff4444;
+}

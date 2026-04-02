@@ -1,0 +1,119 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 15px 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #00ff88;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.tlink {
+  color: #ccc;
+  font-weight: 500;
+  transition: 0.3s;
+  position: relative;
+}
+.tlink::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #00ff88;
+  bottom: -5px;
+  left: 0;
+  transition: 0.3s;
+}
+.tlink:hover {
+  color: #00ff88;
+}
+.tlink:hover::after {
+  width: 100%;
+}
+.hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #000, #1a1a1a);
+  text-align: center;
+}
+.hero h1 {
+  font-size: 3rem;
+  color: #00ff88;
+}
+.hero p {
+  margin-top: 10px;
+  color: #ccc;
+}
+.btn,
+button {
+  margin-top: 20px;
+  padding: 12px;
+  background: #00ff88;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  font-weight: bold;
+}
+.btn:hover,
+button:hover {
+  background: #00cc6a;
+  transform: scale(1.03);
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px;
+  flex-wrap: wrap;
+}
+.card {
+  background: #111;
+  border: 1px solid #00ff88;
+  padding: 20px;
+  border-radius: 12px;
+  width: 250px;
+  text-align: center;
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 15px #00ff88;
+}
+.imc-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+.form {
+  width: 400px;
+  background: #111;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #00ff88;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background: #000;
+  border: 1px solid #00ff88;
+  border-radius: 6px;
+  color: #fff;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #00ff88;
+  color: #777;
+  background: #000;
+}
