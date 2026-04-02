@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Error from "./routes/Error";
 import Home from "./routes/Home";
@@ -33,38 +32,3 @@ function App() {
 }
 
 export default App;
-=======
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Error from "./routes/Error"
-import Home from "./routes/Home"
-import Header from "./components/Header"
-import Footer from "./components/Footer"
-import Sobre from "./routes/Sobre"
-import Contato from "./routes/Contato"
-import Planos from "./routes/Plano"
-import Imc from "./components/Imc"  
-
-
-
-function App() {
-  return (
-    
-<BrowserRouter>
-  <Header />
-  <Routes>
-    
-    <Route path="/" element={<Home/>} />
-    <Route path="*" element={<Error/>} />
-    <Route path="/imc" element={<Imc/>} />
-    <Route path="/sobre" element={<Sobre/>} />
-    <Route path="/planos" element={<Planos/>} />
-    <Route path="/contato" element={<Contato/>} />
-    
-  </Routes>
-  <Footer />
-</BrowserRouter>   
-  )
-}
-
-export default App
->>>>>>> 5f66a5640e781cc920e4f0e640d92ea22c573a48

@@ -46,10 +46,6 @@ export const Tabela = ({ resultado }) => {
       </>
     );
   }
-<<<<<<< HEAD
 };
 
 export default Tabela;
-=======
-};
->>>>>>> 5f66a5640e781cc920e4f0e640d92ea22c573a48
