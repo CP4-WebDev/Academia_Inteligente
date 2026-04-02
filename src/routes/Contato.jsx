@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../css/estilo.css";
 
 const Contato = () => {
   const [form, setForm] = useState({
@@ -21,11 +22,13 @@ const Contato = () => {
   };
 
   return (
-    <div style={{ padding: "40px" }}>
-      <h2>Contato</h2>
+    <div className="contato">
+
+      <h1>Contato</h1>
       <p>Entre em contato conosco!</p>
 
-      <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "10px", maxWidth: "400px" }}>
+      <form onSubmit={handleSubmit} className="form-contato">
+
         <input
           type="text"
           name="nome"
@@ -50,6 +53,7 @@ const Contato = () => {
         />
 
         <button type="submit">Enviar</button>
+
       </form>
     </div>
   );

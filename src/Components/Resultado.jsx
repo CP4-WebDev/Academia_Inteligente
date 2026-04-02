@@ -47,3 +47,5 @@ export const Tabela = ({ resultado }) => {
     );
   }
 };
+
+export default Tabela;
