@@ -22,21 +22,9 @@
 
 - **Home** — apresentacao da academia
 - **Planos** — planos disponiveis
+- **Calculadora de IMC** — calculo de indice de massa corporal
 - **Sobre** — informacoes sobre a academia
 - **Contato** — formulario de contato
-- **Calculadora de IMC** — calculo de indice de massa corporal
-
----
-
-## Como rodar localmente
-
-```bash
-# Instalar dependencias
-npm install
-
-# Iniciar servidor de desenvolvimento
-npm run dev
-```
 
 ---
 
@@ -49,4 +37,3 @@ npm run dev
 
 ---
 
-> Projeto academico desenvolvido para fins educacionais.
