@@ -24,8 +24,6 @@ function Imc() {
   return (
     <section className="container">
       <div className="box">
-        <Header />
-
         <form>
           <div>
             <label htmlFor="altura">
@@ -63,9 +61,11 @@ function Imc() {
         </form>
       </div>
 
-      {mostrarResultado && (
-        <Tabela resultado={Tabela.toFixed(2)} />
-      )}
+    {mostrarResultado && (
+  <Tabela resultado={resultado} />
+)}
+
+  
     </section>
   );
 }

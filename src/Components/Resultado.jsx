@@ -1,51 +1,40 @@
 import "../css/resultado.css";
 
 export const Tabela = ({ resultado }) => {
-  const valor = parseFloat(resultado);
+  const valor = Number(resultado);
+
+  let status = "";
+  let classe = "";
 
   if (valor < 18.5) {
-    return (
-      <>
-        <td>Abaixo do peso</td>
-        <td>Abaixo de 18.5</td>
-      </>
-    )
+    status = "Abaixo do peso";
+    classe = "baixo";
   } else if (valor < 25) {
-    return (
-      <>
-        <td>Peso normal</td>
-        <td>18.5 - 24.9</td>
-      </>
-    );
+    status = "Peso normal";
+    classe = "normal";
   } else if (valor < 30) {
-    return (
-      <>
-        <td>Sobrepeso</td>
-        <td>25 - 29.9</td>
-      </>
-    );
-  } else if (valor < 35) {
-    return (
-      <>
-        <td>Obesidade Grau I</td>
-        <td>30 - 34.9</td>
-      </>
-    );
-  } else if (valor < 40) {
-    return (
-      <>
-        <td>Obesidade Grau II</td>
-        <td>35 - 39.9</td>
-      </>
-    );
+    status = "Sobrepeso";
+    classe = "sobrepeso";
   } else {
-    return (
-      <>
-        <td>Obesidade Grau III</td>
-        <td>Maior ou igual a 40</td>
-      </>
-    );
+    status = "Obesidade";
+    classe = "obesidade";
   }
+
+  return (
+    <div className="resultado-container">
+      <div className="resultado-card">
+        <h2>Seu Resultado</h2>
+
+        <p className="resultado-valor">
+          {valor.toFixed(2)}
+        </p>
+
+        <p className={`resultado-status ${classe}`}>
+          {status}
+        </p>
+      </div>
+    </div>
+  );
 };
 
 export default Tabela;
