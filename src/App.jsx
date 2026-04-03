@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Error from "./routes/Error";
 import Home from "./routes/Home";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
 import Sobre from "./routes/Sobre";
 import Contato from "./routes/Contato";
 import Planos from "./routes/Plano";
