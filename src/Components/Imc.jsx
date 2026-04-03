@@ -23,8 +23,8 @@ function Imc() {
 
   return (
     <section className="container">
-      <h1 className="imc-titulo">Calculadora de IMC</h1>
       <div className="box">
+        <Header />
 
         <form>
           <div>
@@ -64,7 +64,7 @@ function Imc() {
       </div>
 
       {mostrarResultado && (
-        <Tabela resultado={resultado.toFixed(2)} />
+        <Tabela resultado={Tabela.toFixed(2)} />
       )}
     </section>
   );
