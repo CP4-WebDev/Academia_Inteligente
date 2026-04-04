@@ -1,13 +1,31 @@
+import '../css/hero.css'
 import Treino from '../assets/imgs/treino.png'
 import Atleta from  '../assets/imgs/Atleta.png'
 import Luta from '../assets/imgs/Luta.png'
+
 const Plano = () => {
   return (
     <div className="planos">
-      <section className="hero">
-        <h2>Planos</h2>
-        <p>Confira nossos planos e preços!</p>
+      <section className="hero hero--planos">
+        <div className='hero-bg-lines' aria-hidden="true">
+          <span /><span /><span /><span /><span />
+        </div>
+        <div className='hero-content'>
+          <span className='hero-eyebrow'>Escolha o seu ritmo</span>
+          <h1 className='hero-title'>
+            Planos feitos para<br />
+            <em>cada objetivo</em>.
+          </h1>
+          <p className='hero-subtitle'>
+            Do iniciante ao atleta — temos o plano ideal<br />
+            para sua jornada de transformação.
+          </p>
+          <div className='hero-actions'>
+            <a href='#planos' className='btn btn--hero'>Ver preços</a>
+          </div>
+        </div>
       </section>
+
       <section className='galeria'>
         <div className='bloco'>
         <img src={Atleta} alt="atleta" className='img-galeria' />

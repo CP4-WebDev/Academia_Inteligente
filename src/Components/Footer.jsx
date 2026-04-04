@@ -1,10 +1,11 @@
+import "../css/global.css";
+
 const Footer = () => {
   return (
-    
-    <section>
-        <h6>&copy; 2026 Direitos reservados</h6>
-    </section>
-  )
-}
+    <footer className="footer">
+      <p>&copy; 2026 Academia Inteligente — Todos os direitos reservados</p>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;

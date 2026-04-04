@@ -63,13 +63,15 @@ input, textarea {
 
   padding: 40px 20px;
 }
-footer {
+
+.footer {
   width: 100%;
   text-align: center;
   padding: 20px;
   background: #000;
   border-top: 1px solid var(--primary);
   color: var(--text-secondary);
+  font-size: 0.9rem;
 }
 @media (max-width: 768px) {
   .content {
